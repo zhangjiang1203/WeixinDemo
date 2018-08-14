@@ -4,29 +4,26 @@ Page({
    * 页面的初始数据
    */
   data: {
-    message:'loading…………'
+    message:'Hello 小程序'
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    // 上一个界面传递的值
-    console.log(options);
-    console.log('哈哈哈');
     // 加载显示数据
     const _this = this;
-    const doubanAPI = 'https://api.github.com/search/repositories?q=language:' + options.type + '&sort=stars&page=1'
     wx.request({
-      url: doubanAPI,
+      url: 'https://api.github.com/search/repositories?q=afn&sort=stars&page=1',
       data:{},
       // header:{
       //   'Content-Type':'application/json'
       // },
       success:function(res){
+        console.log(res.data.items[0].owner.avatar_url);
         _this.setData({
           list: res.data.items,
-          message:options.type,
+          image: res.data.items[0].owner.avatar_url,
         })
       }
     })

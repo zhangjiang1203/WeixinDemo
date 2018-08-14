@@ -4,32 +4,23 @@ Page({
    * 页面的初始数据
    */
   data: {
-    message:'loading…………'
+    imgUrls:[
+      'http://img3.doubanio.com/view/movie_poster_cover/lpst/public/p2380677316.jpg',
+      'http://img3.doubanio.com/view/movie_poster_cover/lpst/public/p2382076389.jpg',
+      'http://img3.doubanio.com/view/photo/s_ratio_poster/public/p2529206747.jpg',
+    ],
+    titles:[
+      'C', 'C++', "javascript", 'python','Objective-C','Swift','java'
+
+    ]
+    
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    // 上一个界面传递的值
-    console.log(options);
-    console.log('哈哈哈');
-    // 加载显示数据
-    const _this = this;
-    const doubanAPI = 'https://api.github.com/search/repositories?q=language:' + options.type + '&sort=stars&page=1'
-    wx.request({
-      url: doubanAPI,
-      data:{},
-      // header:{
-      //   'Content-Type':'application/json'
-      // },
-      success:function(res){
-        _this.setData({
-          list: res.data.items,
-          message:options.type,
-        })
-      }
-    })
+    // this.setData({imgUrls:[]})
   },
 
   /**

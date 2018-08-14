@@ -1,13 +1,17 @@
 {
+  "_comment":"pages中这是显示的页面，默认会呈现第一个页面",
   "pages":[
+    "pages/board/board",
+    "pages/item/item",
     "pages/list/list",
-    "pages/index/index",
-    "pages/logs/logs"
+    "pages/search/search"
   ],
   "window":{
     "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#fff",
+    "navigationBarBackgroundColor": "#35495e",
     "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle":"black"
+    "_comment":"下面设置的颜色默认只有两种 black和white",
+    "navigationBarTextStyle":"white"
   }
 }
+

@@ -1,0 +1,29 @@
+<view class="showboard">
+    <view class='slider'>
+        <swiper indicator-dots="true" autoplay="true" interval="8000" duration="1000">
+          <block wx:for="{{imgUrls}}">
+            <swiper-item>
+              <image src="{{item}}" class="slide-image" mode='aspectFill'/>
+            </swiper-item>
+          </block>
+        </swiper>
+    </view>
+    <view class='board'>
+    <!-- 包装navigator 设置界面跳转 直接设置URL就可以进行
+    页面跳转进行传值设置:设置url拼接地址多个参数用&符号连接
+    跳转到的界面通过onload方法的参数拿到传递的值,传递过去的是一个字典
+    {type: "in_teather", title: "zhangsan"}
+     -->
+        <view class="item" wx:for="{{ titles }}">
+          <navigator url='../list/list?type={{item}}' hover-class='none'>
+            <text>{{ item }}</text>
+          </navigator>
+        </view>
+
+        <view class="other">
+          <navigator url='../item/item' hover-class='none'>
+            <text>测试跳转</text>
+          </navigator>
+        </view>
+    </view>
+</view>

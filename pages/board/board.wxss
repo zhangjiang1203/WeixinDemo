@@ -1,0 +1,65 @@
+.showboard {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  /* display: flex; */
+} 
+
+.showboard .slider{
+  height: 400rpx;
+}
+
+.slider swiper{
+  height: 100%;
+}
+
+.slider swiper swiper-item image{
+  height: 100%;
+  width: 100%;
+
+}
+
+.board{
+  /* 弹性盒子布局 */
+  direction: flex;
+  flex-direction: column;
+  padding: 30rpx;
+}
+
+
+
+.board .item text{
+  border: 1rpx solid #eee;
+  float: left;
+  height: 70rpx;
+  padding:10px 10px 0 20px;
+  width: 220rpx;
+  text-align: center;
+  margin: 10px;
+}
+
+.board .board-item{
+  display: flex;
+  flex: 1;
+  border: 1rpx solid #eee;
+  margin-top: 20rpx;
+  padding: 40rpx;
+  /* 设置点击时的高亮，加上一个cursor这个属性 
+  添加navigator之后这个不用设置就有高亮
+  */
+  cursor: pointer;
+  background-color: yellow;
+  
+}
+
+.board .board-item text{
+ flex: 1;
+}
+
+.board .board-item image{
+  width: 40rpx;
+  height: 40rpx;
+  /* background-color: red; */
+  margin-top: 8rpx;
+  margin-right:10rpx; 
+}

@@ -1,0 +1,7 @@
+<text>{{ message }}</text>
+<view>
+  <view class="item" wx:for="{{ list }}">
+    <image src="{{item.owner.avatar_url}}"></image>
+    <text>{{ item.name }}</text>
+  </view>
+</view>

@@ -1,7 +1,16 @@
-<text>{{ message }}</text>
-<view>
+
+<view class='box'>
+  <view class='message'>
+     <text>{{ message }}</text>
+  </view>
+
   <view class="item" wx:for="{{ list }}">
-    <image src="{{item.owner.avatar_url}}"></image>
-    <text>{{ item.name }}</text>
+    <view class='img'>
+      <image src="{{item.owner.avatar_url}}"></image>
+    </view>
+    <view class='showtxt'>
+      <text class='name'>{{ item.name }}</text>
+      <text class='desc'>{{ item.description }}</text>
+    </view>
   </view>
 </view>
